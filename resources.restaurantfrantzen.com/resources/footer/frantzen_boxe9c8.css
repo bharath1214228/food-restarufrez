@@ -1,0 +1,172 @@
+/* CSS Document */
+
+/* Franzén-väljaren */
+
+	    @font-face {
+                        font-family: 'MuseoSans-500';
+                        src: url('MuseoSans_500.eot');
+       }
+
+      @font-face {
+                        font-family: 'MuseoSans-500';
+                        src: url('MuseoSans_500.woff') format('woff'),
+url('MuseoSans_500.svg#MuseoSans-500') format('svg');
+       }
+
+
+@font-face {
+                        font-family: 'MuseoSans-100';
+                        src: url('MuseoSans_100.eot');
+       }
+
+      @font-face {
+                        font-family: 'MuseoSans-100';
+                        src: url('MuseoSans_100.woff') format('woff'),
+url('MuseoSans_100.svg#MuseoSans-100') format('svg');
+       }
+
+
+footer {
+  display: block;
+  position: fixed;
+  border-top: 2px solid #000;
+  background-color: #fff;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000;
+font-family: 'MuseoSans-100';
+font-size:14px;
+
+}
+
+
+.footer_box {
+	z-index: 999;
+	display:block;
+	width:255px;
+	color:#000;
+	position:fixed;
+	bottom: 0px;
+	right:100px;	
+	font-family: 'MuseoSans-500';
+	padding-bottom:37px;
+	
+}
+
+.footer_box a {
+	text-decoration:none;
+}
+
+.footer_box .flabel {
+	display:inline-block;
+	color:#fff;
+	text-transform:uppercase;
+	padding:10px 15px;
+	font-size:12px;
+	float:right;
+	background-color:#5B5C60;
+	cursor:pointer;
+}
+
+.footer_box ul {
+	margin:20px;
+	padding:0px;
+}
+
+.footer_box .links {
+	border:1px solid #5B5C60;
+	clear: both;
+	font-size:14px;
+	background-color:#fff;
+	display:none;
+    width: 100%;
+	padding: 0;
+	float: right;
+}
+
+.footer_box .links li {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	font-family: 'MuseoSans-100';
+    line-height: 1.4em;
+	text-align: left;
+}
+
+.footer_box .links li a {
+	font-family: 'MuseoSans-100';
+	font-size:14px;
+}
+
+.footer_box .links li:last-child {
+	margin-top:10px;
+}
+
+/* Cookie */
+
+.cli-plugin-button, .cli-plugin-button:visited {
+    box-shadow: none !important;
+}
+
+#cookie-law-info-bar {
+	    border-top: 2px solid rgb(68, 68, 68) !important;
+	    padding: 7px 0 !important;
+}
+
+#cookie-law-info-bar .cli-plugin-button, .cli-plugin-button:visited {
+	background: none;
+}
+
+#cookie_action_close_header {
+	color:#fff !important;
+}
+
+/* End cookie */
+
+@media screen and (max-width:480px) {
+	
+.footer_box {
+    right: 50%;
+    margin-right: -125px;
+    text-align: center;
+}
+    
+    .footer_box .flabel {
+    float: inherit;
+}
+    
+    .footer_box .links li {
+    text-align: center;
+    }
+
+}
+
+@media screen and (max-width:414px) {
+	
+	.footer_box {
+	width:200px;
+    margin-right: -100px;
+
+}
+
+}
+
+@media screen and (max-width:375px) {
+	
+.footer_box {
+    
+}
+	
+
+}
+
+@media screen and (max-width:320px) {
+	
+.footer_box {
+  
+}
+	
+	
+}

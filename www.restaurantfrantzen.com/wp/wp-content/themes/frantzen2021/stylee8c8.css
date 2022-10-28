@@ -1,0 +1,621 @@
+/*
+THEME NAME: Restaurant Frantzen 2021
+THEME URI: http://
+DESCRIPTION: 
+VERSION: 1.0
+AUTHOR: Fredrik Öberg
+AUTHOR URI:
+TAGS: 
+*/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{font-size:100%;font:inherit;padding:0;border:0;margin:0;vertical-align:baseline}body{}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}.clear{clear:both}
+.sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}
+
+
+
+@font-face {
+                        font-family: 'ChronicleDisplay-Bold';
+                        src: url('fonts/ChronicleDisp-Bold.html');
+       }
+
+      @font-face {
+                        font-family: 'ChronicleDisplay-Bold';
+                        src: url('fonts/ChronicleDisp-Bold.woff') format('woff'),
+url('fonts/ChronicleDisp-Bold.svg#ChronicleDisplay-Bold') format('svg');
+       }
+	   
+	    @font-face {
+                        font-family: 'ChronicleDisplay-Roman';
+                        src: url('fonts/ChronicleDisp-Roman.html');
+       }
+
+      @font-face {
+                        font-family: 'ChronicleDisplay-Roman';
+                        src: url('fonts/ChronicleDisp-Roman.woff') format('woff'),
+url('fonts/ChronicleDisp-Roman.svg#ChronicleDisplay-Roman') format('svg');
+       }
+
+    @font-face {
+                        font-family: 'ChronicleDisplay-BoldItalic';
+                        src: url('fonts/ChronicleDisp-BoldItal.html');
+       }
+
+      @font-face {
+                        font-family: 'ChronicleDisplay-BoldItalic';
+                        src: url('fonts/ChronicleDisp-BoldItal.woff') format('woff'),
+                        url('fonts/ChronicleDisp-BoldItal.svg#ChronicleDisplay-BoldItalic') format('svg');
+       }
+
+        @font-face {
+          font-family:'Bebas Neue Bold';
+          src: url('fonts/BebasNeueBold.eot');
+          src: url('fonts/BebasNeueBoldd41d.eot?#iefix') format('embedded-opentype'),
+          url('fonts/BebasNeueBold.woff2') format('woff2'),
+          url('fonts/BebasNeueBold.woff') format('woff'),
+          url('fonts/BebasNeueBold.svg#BebasNeueBold') format('svg');
+          font-weight: normal;
+          font-style: normal; }
+
+   @font-face {
+          font-family: 'Museo Sans 700';
+          src: url('fonts/MuseoSans_700.eot');
+          src: url('fonts/MuseoSans_700d41d.eot?#iefix') format('embedded-opentype'),
+          url('fonts/MuseoSans_700.woff2') format('woff2'),
+          url('fonts/MuseoSans_700.woff') format('woff'),
+          url('fonts/MuseoSans_700.svg#MuseoSans-700') format('svg');
+          font-weight: normal;
+          font-style: normal; }
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+html,body {
+    height:100%;
+}
+
+a, a:hover, a:active, a:focus,a:visited {
+    color:inherit;
+    text-decoration: underline;
+}
+
+a.btn  { text-decoration:none; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.slide_container {
+    height:100%;
+}
+
+.slide_container .slide_content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.slide_content h1 {
+    font-size: 60px;
+    letter-spacing: 0.05em;
+    font-weight: normal;
+}
+
+
+.reservation {
+    display:inline-block;
+    border: 1px solid #fff;
+    font-family: 'Museo Sans 700';
+    color:#fff;
+    padding: 10px 15px;
+    position: fixed;
+    top:0px;
+    right:0px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    z-index: 100;
+}
+
+.taptap-by-bonfire ul li a {
+    text-transform:uppercase;
+
+}
+
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide_container {
+    background-size: auto 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+.demo {
+    margin:0 auto;
+    transition: opacity 1s;  
+    opacity: 0;
+}
+
+.magictime {
+    transition: opacity 1s; 
+    opacity: 1;
+}
+
+.wrapper_image {
+    opacity:0;
+    transition: opacity 1s; 
+
+}
+
+.visible {
+    opacity: 1 !important;
+}
+
+.scroll_arrow {
+    position: fixed;
+    bottom: 100px;
+    display: block;
+    text-align: center;
+    z-index: 198;
+    width: 100%;
+    
+}
+
+.scroll_arrow a {
+    display: relative;
+}
+
+.scroll_arrow img {
+  animation: MoveUpDown 2s ease-in-out infinite;
+transition: transform .3s ease-in-out;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.scroll_arrow  img:hover {
+  transform: rotate(180deg);
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
+  }
+}
+
+.scroll_arrow img {
+    width:25px;
+}
+
+.slide_content  {
+}
+
+.slide_content.visible {
+    opacity: 1;
+}
+
+.slide_counter {
+        position: absolute;
+    bottom: 27px;
+    z-index: 100;
+    text-align: center;
+    width: 100%;
+    font-size: 33px;
+}
+
+
+.slide_content div { opacity: 0;     transition: opacity 1s;  }
+
+img {
+    max-width:100%;
+    height: auto;
+}
+
+h1 { font-family: 'ChronicleDisplay-Roman'; font-size: 70px; }
+
+.slide_container div.rubrik, .footer_content h3 {
+ font-family: 'Museo Sans 700';
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    font-style: normal;
+}
+
+.slide_container div.brodtext {
+    font-size: 40px;
+    /* font-family: ChronicleDisplay-BoldItalic; */
+    font-style: italic;
+}
+
+.slide_text_wrapper div.liten {
+    max-width: 480px;
+    margin: 10px auto 15px auto;
+}
+
+.footer_content div.liten {
+      margin: inherit;
+    padding: 20px;
+}
+
+.slide_container div.liten.brodtext {
+    font-size: 20px;
+}
+
+
+.border_fade {
+ /*   background-image: url('images/frantz_border.png'); */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 200px;
+    background-size: auto 100%;
+    z-index: 10;
+}
+
+.border_fade.down {
+    top: auto;
+    bottom: 0;
+    z-index: 11;
+    transform: rotate(180deg);
+}
+
+.full_page_fade {
+        position: absolute;
+    height: 100%;
+    width:100%;
+    background-color: #000;
+    z-index: 99;
+    transition: opacity 1s;  
+    opacity: 1;
+}
+
+
+
+.footer_content {
+position: absolute;
+    width: 99%;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+body .footer_content div { 
+    display: inline-block;
+    max-width:260px !important;
+    margin: 20px; 
+}
+
+
+.slide_container { position:relative; opacity: 0; }
+.slide_content {   
+    position: absolute;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+}
+
+.slide_content div, .gallery_text_wrapper div {
+display: block;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.container-magic-center.d-flex.justify-content-center {
+    background-color: #000;
+    width: 100px;
+    height: 100px;
+}
+
+.slide_container .slick-prev, .slide_container .slick-next {
+        z-index: 97;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 1 !important;
+    z-index: 10;
+}
+
+
+
+/* .slick-slide { opacity: 0;   transition: opacity 1s;  } */
+
+.slide_container .slick-prev { left: 50px; }
+
+.slide_container .slick-next { right:50px; }
+
+.slick.gallery {
+    width:100%;
+    overflow: hidden;
+}
+
+.slide_container .slick-prev:before, .slide_container .slick-next:before {
+    content: url(images/arrow_down.svg);
+    transform: rotate(270deg);
+    display: block;
+}
+
+.slide_container.visible.wrapper_footer {
+    background-size: cover !important;
+}
+
+.slide_container .slick-prev:before {
+    transform: rotate(90deg);
+}
+
+.slide_content_text_gallery { position: relative; }
+
+.gallery_text_wrapper {
+    position: absolute;
+    z-index: 100;
+    top: -40%;
+    width: 100%;
+    text-align: center;
+}
+.btn { display:inline-block; margin:30px; padding:15px 30px; border:1px solid #fff; color:#fff; background-color: transparent;}
+
+.scroll_spacer { height:800px; }
+
+.spoon_wrapper {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.spoon {
+    position: absolute;
+    top: -64%;
+    right: 0;
+}
+
+
+.slick-dots li button:before {
+    color: white;
+}
+
+
+.spoon.rellax img {
+    max-width: 60%;
+    float: right;
+}
+
+.slide_content_footer { height:100%; }
+
+.spoon_wrapper .spoon_overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 100;
+    background-image: url('images/spoon/spoon_overlay.png');
+    background-size: cover;
+}
+
+.slide_text_wrapper .reservation {
+    position: inherit;
+}
+
+
+
+footer {
+    color:#000;
+}
+
+footer a {
+    text-decoration: none;
+}
+/* V4 - Start */ 
+
+
+.slide_wrapper {
+height: 100%;
+    position: relative;
+    background-color: #000;
+}
+
+.slide_text_wrapper, .slide_gallery_wrapper {
+     top: 40%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    padding: 0 15px;
+}
+
+.slide_text_wrapper div {
+    opacity: 0;
+    transition: opacity 0.5s;  
+}
+
+#block_id_1 .brodtext img {
+    max-width:150px;
+}
+
+
+
+  .btype_slide_content_text_gallery, .btype_slide_content_gallery {
+        height: initial !important;
+    }
+
+body .slick-dots {
+    bottom: 25px;
+}
+
+body .slick-dots li button:before {
+    color: white;
+    opacity: 0.5;
+}
+
+body .slick-dots li.slick-active button:before {
+    color: white;
+    opacity: 1;
+}
+
+div#mc_embed_signup, #mc_embed_signup_scroll, #mce-responses {
+    margin: 0;
+    /* padding: 0 !important; */
+}
+
+input#mc-embedded-subscribe {
+    color: #000;
+    padding: 5px 20px;
+}
+
+input#mc-embedded-subscribe {
+    color: #fff;
+    padding: 10px 20px;
+    font-family: 'Museo Sans 700';
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 0;
+    letter-spacing: 2px;
+    display: block;
+    position: inherit;
+    margin: 20px auto 10px auto;
+}
+    
+body .footer_content #mc_embed_signup div {
+    margin: 0 0 10px 0;
+}
+    
+    
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+.footer_content div.liten {
+      margin: inherit;
+    padding: 0px;
+}
+
+    
+    
+    .slide_container.visible.wrapper_footer {
+    height: 130%;
+}
+    .footer_content {
+    width: 95%;
+}
+    
+  
+    .btn.reservation.reservation_link {
+        display:none;
+    }
+    
+    .slide_wrapper .btn.reservation.reservation_link {
+        display:inline-block;
+        padding: 10px;
+    }
+    
+    
+    h1 { font-size:32px; }
+    
+    #block_id_1 .brodtext img {
+    max-width: 90px;
+}
+    
+    .slide_container div.brodtext {
+    font-size: 20px;
+ }
+    .slide_container div.liten.brodtext {
+    font-size: 18px;
+ }
+    
+    .slide_container div.rubrik {
+    font-size: 14px;
+}
+    
+    .stor.brodtext {
+        
+    }
+
+    .footer_content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+    
+
+.slide_content h1 {
+    font-size: 32px;
+}
+    
+    body .footer_content div {
+    min-width: 240px;
+}
+    
+    .slide_content div, .gallery_text_wrapper div {
+    padding: 0 30px;
+}
+    .reservation {
+    padding: 5px 5px;
+    font-size: 12px;    
+}    
+    
+.taptap-logo-wrapper {
+    top: 15px;
+}    
+    
+.taptap-logo-image img {
+    max-height: 30px;
+}   
+    
+    
+.taptap-menu-button-wrapper {
+    top: 0px;
+    left: 10px;
+}   
+    
+    .slide_content div.brodtext, .gallery_text_wrapper div.brodtext, .footer_content div.brodtext {
+    font-size: 20px;
+}
+    
+    .slide_text_wrapper, .slide_gallery_wrapper {
+    top: 30%;
+}
+    
+    .border_fade {
+    height: 100px;
+}
+    
+    
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+
+}
